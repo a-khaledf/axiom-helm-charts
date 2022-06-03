@@ -31,7 +31,7 @@ entries:
     appVersion: 1.20.3
     created: "2022-07-07T07:20:04.718037929Z"
     description: Axiom Private
-    digest: 6658bb8744589f54778624b2db1a70b753a391d4ab2a10fa7dde7146dbfebacd
+    digest: 5fe3cfe097f4855e03a65671b162473cf056033c23094e673d0078afaec9c419
     maintainers:
     - email: hello@axiom.co
       name: Axiom Inc.
@@ -68,7 +68,11 @@ entries:
     version: 0.20.0
   - apiVersion: v2
     appVersion: 1.19.0
+<<<<<<< HEAD
     created: "2022-07-07T07:20:04.715810836Z"
+=======
+    created: "2022-06-03T14:35:06.060927133Z"
+>>>>>>> f17c973 (test-release)
     description: Axiom Private
     digest: 61d00cb923c796113525afc63871f8950241f9c10610d7ad1d9eee04036f384a
     maintainers:
