@@ -35,6 +35,6 @@ jobs:
           git add .
           git commit -m "test-release"
           git push origin release-test-2
-          gh pr create
+          gh pr create --title update-release-test-2 --body test
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
