@@ -31,16 +31,3 @@ jobs:
         run: echo "$GITHUB_ENV"
         env:
           GITHUB_ENV: ${{ toJson(env) }}
-      - name: release
-        run: |
-          branch_name=release-test-${{ github.sha }}
-
-          git checkout -b $branch_name
-          helm package . --destination docs
-          helm repo index docs/ --url 'https://a-khaledf.github.io/axiom-helm-charts'
-          git add .
-          git commit -m "test-release"
-          git push origin $branch_name
-          gh pr create --title update-$branch_name --body testg
-        env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
