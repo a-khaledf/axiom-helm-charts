@@ -16,8 +16,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config user.name "$GITHUB_ACTOR"
-          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
 
       - name: Install Helm
         uses: azure/setup-helm@v1
@@ -33,7 +33,6 @@ jobs:
           GITHUB_ENV: ${{ toJson(env) }}
       - name: release
         run: |
-          echo github actor: $GITHUB_ACTOR
           branch_name=release-test-${{ github.sha }}
           git config --list
           git checkout -b $branch_name
