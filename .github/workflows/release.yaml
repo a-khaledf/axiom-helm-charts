@@ -28,13 +28,13 @@ jobs:
         run: |
           git remote -v
           ls -la
-          git checkout -b "release-test-2"
+          git checkout -b "release-test-3"
           helm package . --destination docs
           helm repo index docs/ --url 'https://a-khaledf.github.io/axiom-helm-charts'
           ls -la
           git add .
           git commit -m "test-release"
-          git push origin release-test-2
-          gh pr create --title update-release-test-2 --body test
+          git push origin release-test-3
+          gh pr create --title update-release-test-3 --body testg
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
