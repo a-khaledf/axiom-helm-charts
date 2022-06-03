@@ -29,5 +29,6 @@ jobs:
         with:
           charts_repo_url: https://a-khaledf.github.io/axiom-helm-charts
           config: cr.yaml
+          charts_dir: .
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
