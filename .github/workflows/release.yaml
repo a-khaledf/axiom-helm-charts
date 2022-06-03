@@ -24,7 +24,14 @@ jobs:
         uses: azure/setup-helm@v1
         with:
           version: v3.8.1
-
+      - name: Print GitHub context
+        run: echo "$GITHUB_CONTEXT"
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+      - name: Print github env
+        run: echo "$GITHUB_ENV"
+        env:
+          GITHUB_ENV: ${{ toJson(env) }}
       - name: release
         run: |
           branch_name=release-$(grep -o 'version:.*' Chart.yaml | cut -d ' ' -f 2)
