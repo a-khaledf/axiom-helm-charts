@@ -7,10 +7,4 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
-      - name: debug
-        run: echo ${{ toJson(github) }}
+      - uses: hmarr/debug-action@v2
