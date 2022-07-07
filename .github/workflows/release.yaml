@@ -13,4 +13,4 @@ jobs:
           fetch-depth: 0
 
       - name: debug
-        rune: echo ${{ github }}
+        run: echo ${{ github }}
