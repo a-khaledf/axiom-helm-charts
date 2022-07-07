@@ -13,4 +13,4 @@ jobs:
           fetch-depth: 0
 
       - name: debug
-        run: echo ${{ github }}
+        run: echo ${{ toJson(github) }}
